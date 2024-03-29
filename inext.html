@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmeto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Header/nav  -->
+    <Header class="flex justify-between align-center nav">
+        <h1>Arithmeto</h1>
+        <div>
+            <button class="sign-in-btn" onmouseover="hoverSignIn(this)" onmouseout="mouseoutSignIn(this)">Sign In</button>
+        </div>
+    </Header>
+
+    <!-- Main Body -->
+    <Main class="flex gap-5">
+
+        <!-- left column -->
+        <div class="flex-1 flex column align-center gap-5 left-column">
+            <img src="./img/cartoon-number-four.png" alt="Decrative img" class="deco-img" id="four">
+            <img src="./img/addition.png" alt="Decrative img" class="deco-img">
+            <img src="./img/cartoon-number-nine.png" alt="Decrative img" class="deco-img" id="nine">
+        </div>
+
+        <!-- center column -->
+
+        <!-- nav button if the screen is small -->
+        <div class="flex-2 flex column gap-3 center-column">
+            <div class="hidden nav-btn" id="nav-btn" onclick="openNav('nav-card')">
+                <img src="./img/nav-icon.png" alt="" class="nav-img" onmouseover="hoverGray(this)" onmouseout="mouseoutGray(this)">
+            </div>
+            <div class="nav-card-sm hidden" id="nav-card">
+                <div class = "flex justify-between align-center">
+                    <h3 class="nav-title">Nav Bar</h3>
+                    <button class="close-nav-button" onclick="closeNav('nav-card')" onmouseover="hoverSignIn(this)" 
+                    onmouseout="mouseoutSignIn(this)">X</button>
+                </div>
+                <ul>
+                    <li onmouseover="hoverGray(this)" onmouseout="mouseoutGray(this)"><a href="" class="nav-links" >Practice</a></li>
+                    <li onmouseover="hoverGray(this)" onmouseout="mouseoutGray(this)"><a href="" class="nav-links" >Achievemnts</a></li>
+                    <li onmouseover="hoverGray(this)" onmouseout="mouseoutGray(this)"><a href="" class="nav-links" >By grade</a></li>
+                    <li onmouseover="hoverGray(this)" onmouseout="mouseoutGray(this)"><a href="" class="nav-links" >By subject</a></li>
+                    <li onmouseover="hoverGray(this)" onmouseout="mouseoutGray(this)"><a href="" class="nav-links" >Classroom</a></li>
+                    <li onmouseover="hoverGray(this)" onmouseout="mouseoutGray(this)"><a href="" class="nav-links" >Profile</a></li>
+                </ul>
+            </div>
+
+            <!-- displays grade level and unit -->
+            <div class="flex justify-between align-center">
+                <div class="flex align-center">
+                    <img src="./img/Grade-Icon.png" alt="grade icon" id="grade-icon">
+                    <h2>Grade: Third Grade</h2>
+                </div>
+                <div class="flex align-center">
+                    <h3>Unit: Basic Operations</h3>
+                    <img src="./img/Unit-icon.png" alt="Unit icon" id="unit-icon">
+                </div>
+            </div>
+
+            <!-- Displays lessons and challenges -->
+            <div class="flex column gap-3">
+                <div class="flex column align-center gap-3">
+                    <h4>Addition</h4>
+                    <div class="flex gap-5">
+                        <button class="main-button" id="addition-btn" onclick="openLesson('addition-lesson')" onmouseover="hoverRed(this)" 
+                        onmouseout="mouseoutRed(this)">Lesson</button>
+                        <button class="main-button" id="addition" onclick="openChallenge('addition')" onmouseover="hoverRed(this)" 
+                        onmouseout="mouseoutRed(this)">Challenge</button>
+                    </div>
+                </div>
+                <div class="flex column align-center gap-3">
+                    <h4>Subtraction</h4>
+                    <div class="flex gap-5">
+                        <button class="main-button" onclick="openLesson('subtraction-lesson')" id="subtraction-btn" 
+                        onmouseover="hoverRed(this)" onmouseout="mouseoutRed(this)">Lesson</button>
+                        <button class="main-button" id="subtraction" onclick="openChallenge('subtraction')" 
+                        onmouseover="hoverRed(this)" onmouseout="mouseoutRed(this)">Challenge</button>
+                    </div>
+                </div>
+                <div class="flex column align-center gap-3">
+                    <h4>Multiplication</h4>
+                    <div class="flex gap-5">
+                        <button class="main-button" onclick="openLesson('multiplication-lesson')" id="multiplication-btn"
+                        onmouseover="hoverRed(this)" onmouseout="mouseoutRed(this)">Lesson</button>
+                        <button class="main-button" id="multiplication" onclick="openChallenge('multiplication')" 
+                        onmouseover="hoverRed(this)" onmouseout="mouseoutRed(this)">Challenge</button>
+                    </div>
+                </div>
+                <div class="flex column align-center gap-3">
+                    <h4>Division</h4>
+                    <div class="flex gap-5">
+                        <button class="main-button" onclick="openLesson('division-lesson')" id="division-btn" 
+                        onmouseover="hoverRed(this)" onmouseout="mouseoutRed(this)">Lesson</button>
+                        <button class="main-button" id="division" onclick="openChallenge('division')"
+                        onmouseover="hoverRed(this)" onmouseout="mouseoutRed(this)">Challenge</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- right column -->
+        <div class="flex-1 right-column">
+            <div>
+                <ul class="nav-card">
+                    <li onmouseover="hoverGray(this)" onmouseout="mouseoutGray(this)"><a href="" class="nav-links" >Practice</a></li>
+                    <li onmouseover="hoverGray(this)" onmouseout="mouseoutGray(this)"><a href="" class="nav-links" >Achievemnts</a></li>
+                    <li onmouseover="hoverGray(this)" onmouseout="mouseoutGray(this)"><a href="" class="nav-links" >By grade</a></li>
+                    <li onmouseover="hoverGray(this)" onmouseout="mouseoutGray(this)"><a href="" class="nav-links" >By subject</a></li>
+                    <li onmouseover="hoverGray(this)" onmouseout="mouseoutGray(this)"><a href="" class="nav-links" >Classroom</a></li>
+                    <li onmouseover="hoverGray(this)" onmouseout="mouseoutGray(this)"><a href="" class="nav-links" >Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </Main>
+
+    <!-- Addition Lesson  -->
+    <div class="lesson flex column hidden" id="addition-lesson">
+        <div class="flex justify-between pop-header">
+            <h2>Adding Three Digit Numbers</h2>
+            <button class="lesson-btn" onclick="closeLesson('addition-lesson'); completeBtn('addition-btn')" onmouseover="hoverSignIn(this)" 
+            onmouseout="mouseoutSignIn(this)">X</button>
+        </div>
+        <div class="pop-body">
+            <p><strong>Step 1: Setting up the problem</strong> Stack one number on top of the other number. Make sure to align the ones, tens, and hundreds column.</p>
+            <img src="./img/Addition_Lesson/Additon_Step_1.jpg" alt="Addition Step 1" class="example">
+            <p><strong>Step 2: Adding the ones column</strong> Add the digits in the ones column. If the number is 10 or higher, write the ones under the line and in the ones column,
+                and write the remaining tens above the tens column.</p>
+            <img src="./img/Addition_Lesson/Addition_Step_2.jpg" alt="Addition Step 2" class="example">
+            <p><strong>Step 3: Adding the tens column</strong> Add the digits in the tens column. If the number is 10 or highter, write the ones under the line and in the tens column,
+                and write the remaining tens above the hundreds column.</p>
+            <img src="./img/Addition_Lesson/Addition_Step_3.jpg" alt="Addition Step 3" class="example">
+            <p><strong>Step 4: Adding the hundreds column</strong> Add the digits in the hundreds column. write the number under the hundreds column.</p>
+            <img src="./img/Addition_Lesson/Addition_Step_4.jpg" alt="Addition Step 4" class="example">
+        </div>
+    </div>
+    <!-- subtraction Lesson -->
+
+    <div class="lesson flex column hidden" id="subtraction-lesson">
+        <div class="flex justify-between pop-header">
+            <h2>Subtracting three digit numbers</h2>
+            <button class="lesson-btn" onclick="closeLesson('subtraction-lesson'); completeBtn('subtraction-btn') " onmouseover="hoverSignIn(this)" 
+            onmouseout="mouseoutSignIn(this)">X</button>
+        </div>
+        <div class="pop-body">
+            <p><strong>Step 1: Setting up the problem</strong>Stack one number on top of the other number. Make sure to align the ones, tens, and hundreds column.</p>
+            <img src="./img/Subtraction_Lesson/Subtraction_Step_1.jpg" alt="Subtraction Step 1" class="example">
+            <p><strong>Step 2: Subtract the ones column</strong> Subtract the digits in the ones column. If the number is less than 0, borrow from the tens column
+            and add 10 to the number in the ones column. Subtract and write the remaining number under the line in the ones column.</p>
+            <img src="./img/Subtraction_Lesson/Subtraction_Step_2.jpg" alt="Subtraction Step 2" class="example">
+            <p><strong>Step 3: Subtract the tens column</strong>Subtract the digits in the tens column. If the number is less than 0, borrow from the hundreds column
+                and add 10 to the number in the ones column. Subtract and write the remaining number under the line in the tens column.</p>
+            <img src="./img/Subtraction_Lesson/Subtraction_Step_3.jpg" alt="Subtraction Step 3" class="example">
+            <p><strong>Step 4: Subtract the hundreds column</strong>Subtract the digits in the hundreds column. 
+                Subtract and write the remaining number under the line in the ones column.</p>
+            <img src="./img/Subtraction_Lesson/Subtraction_Step_4.jpg" alt="Subtraction Step 4" class="example">
+        </div>
+    </div>
+
+
+    <!-- Multiplication Lesson  -->
+
+    <div class="lesson flex column hidden" id="multiplication-lesson">
+        <div class="flex justify-between pop-header">
+            <h2>Multiplication</h2>
+            <button class="lesson-btn" onclick="closeLesson('multiplication-lesson'); completeBtn('multiplication-btn')" onmouseover="hoverSignIn(this)" 
+            onmouseout="mouseoutSignIn(this)">X</button>
+        </div>
+        <div class="pop-body">
+            <h3>Parts of a Multiplication Problem</h3>
+            <p>There are five parts of a multiplication problem. The first is the <strong>multiplicand</strong>. This is the number that you are multiplying.</p>
+            <img src="./img/Multiplication_Lesson/Multiplicand.jpg" alt="Multiplicand" class="example">
+            <p>The second part of a multiplication problem is the <strong>mutltiplication sign</strong>. This tells that you are going to multiply two numbers together</p>
+            <img src="./img/Multiplication_Lesson/Multiplication_sign.jpg" alt="Multiplication sign" class="example">
+            <p>The third part is the <strong>multiplier</strong>. This can be thought of as how many times you add the multiplicand to itself</p>
+            <img src="./img/Multiplication_Lesson/Multiplier.jpg" alt="Multiplier" class="example">
+            <p>The fourth part of a multiplication problem is the <strong>equals sign</strong>. You should already be familar with this and it signifies the end of the problem</p>
+            <img src="./img/Multiplication_Lesson/Equals_Sign.jpg" alt="equals sign" class="example">
+            <p>The final part of a multiplication problem is the <strong>product</strong>. This is the answer to the problem</p>
+            <img src="./img/Multiplication_Lesson/Product.jpg" alt="Product" class="example">
+            
+            <h3>Let's Solve These Two Problems:</h3>
+            <p>We can think of our <strong>multiplicand</strong> as a group. In the first problem we have a group of 4</p>
+            <img src="./img/Multiplication_Lesson/Group_Of_Four.jpg" alt="Group of four" class="example">
+            <p>Now we can think of our <strong>multiplier</strong> as how many groups we have, so we have 2 groups</p>
+            <img src="./img/Multiplication_Lesson/Two_Groups.jpg" alt="two Groups" class="example">
+            <p>Finally, we need to find our <strong>product</strong>.Simply add all of the circles in each group to get our <strong>Product</strong> which is 8.</p>
+            <img src="./img/Multiplication_Lesson/Answer_is_8.jpg" alt="Answer is eight" class="example">
+            
+            <p>Let's solve our second problem:</p>
+            <p>Again, we can think of our <strong>multiplicand</strong> as a group. Here we have a group of 3</p>
+            <img src="./img/Multiplication_Lesson/Group_Of_Three.jpg" alt="Group of 3" class="example">
+            <p>Remember, our <strong>multiplier</strong>  is as how many groups we have, so this time we have 3 groups</p>
+            <img src="./img/Multiplication_Lesson/Three_Groups.jpg" alt="Three Groups" class="example">
+            <p>Now add all of our circles together, and our <strong>Product</strong> is 9.</p>
+            <img src="./img/Multiplication_Lesson/Answer_is_9.jpg" alt="Answer is 9" class="example">
+        </div>
+    </div>
+
+    <!-- Division Lesson  -->
+
+    <div class="lesson flex column hidden" id="division-lesson">
+        <div class="flex justify-between pop-header " >
+            <h2>Division</h2>
+            <button class="lesson-btn" onclick="closeLesson('division-lesson'); completeBtn('division-btn')" onmouseover="hoverSignIn(this)" 
+            onmouseout="mouseoutSignIn(this)">X</button>
+        </div>
+        <div class="pop-body">
+            <p>There are three parts to a division problem. The first part is the <strong>Dividend</strong>. This is the number being divided</p>
+            <img src="./img/Division_Lesson/Dividend.jpg" alt="Dividend" class="example">
+            <p>The second part is the <strong>Divisor</strong>. This is how many groups you're dividing into.</p>
+            <img src="./img/Division_Lesson/Divisor.jpg" alt="Divisor" class="example">
+            <p>The third and final part of a division problem is the <strong>Quotient</strong></p>
+            <img src="./img/Division_Lesson/Quotient.jpg" alt="Quotient" class="example">
+            
+            <p><strong>Step 1:</strong> Our first step is to determine how many times our <strong>Divisor</strong> can go into the first digit of our <strong>Dividend</strong>. 
+            If our <strong>divisor</strong> is greater than the first digit than include the second digit. Write this above the last digit that you included.</p>
+            <img src="./img/Division_Lesson/Step_1.jpg" alt="Step 1" class="example">
+            <p><strong>Step 2:</strong> Multiply the first digit in the <strong>Quotient</strong> by the <strong>Divisor</strong> and write it below the <strong>Dividend</strong>.</p>
+            <img src="./img/Division_Lesson/Step_2.jpg" alt="Step 2" class="example">
+            <p><strong>Step 3:</strong> Subtract the number underneath the <strong>Quotient</strong> and bring down the next digit in the <strong>Dividend</strong>.</p>
+            <img src="./img/Division_Lesson/Step_3.jpg" alt="Step 3" class="example">
+            <p><strong>Step 4:</strong> If the result is zero then the problem is complete. Otherwise, repeat Steps 1-3 until the <strong>Dividend</strong> is zero</p>
+            <img src="./img/Division_Lesson/Step_4.jpg" alt="Step 4" class="example">
+        </div>
+    </div>
+
+    <!-- Challenges -->
+
+    <div class="lesson flex column hidden" id="challenge-window" >
+        <div class="flex justify-between pop-header">
+            <h2>Challenges</h2>
+            <button class="lesson-btn"  onclick="closeChallenge()" onmouseover="hoverSignIn(this)" 
+            onmouseout="mouseoutSignIn(this)">X</button>
+        </div>
+        <div class="pop-body flex column">
+            <div class="progress-bar-0" id="progression">
+            </div>
+            <div>
+                <h3>find the <span id="answer-type"></span></h3>
+                <p><span id="first-number"></span><span id="operation"></span><span id="second-number"></span> = </p>
+            </div>
+            <p class="correct hide-correct" id="correct">Correct!!</p>
+            <div>
+                <input type="text" id="input" autocomplete="off" onchange="storeAnswer()">
+                <button class="submit-btn" id="submit-btn" onclick="submit()">Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
